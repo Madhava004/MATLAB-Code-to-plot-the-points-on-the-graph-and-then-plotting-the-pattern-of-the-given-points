@@ -1,0 +1,27 @@
+%% FIELD CONTROL
+x = [70 80 95 105 115 125 135];
+y = [472 557 685 767 829 895 975];
+p = polyfit(x, y, 1);
+v = polyval(p, x);
+figure(1)
+plot(x,y,'x','MarkerEdgeColor','black')
+hold on
+plot(x, v)
+hold off
+grid on;
+xlabel('Armature Voltage');
+ylabel('Speed');
+hold on 
+x = [70 95 115 135 150 180 200];
+y = [460 630 840 1010 1100 1335 1460];
+p = polyfit(x, y, 1);
+v = polyval(p, x);
+figure(1)
+plot(x,y,'o','MarkerEdgeColor','black')
+hold on
+plot(x, v)
+hold off
+grid on;
+xlabel('Armature Voltage');
+ylabel('Speed');
+
